@@ -1,0 +1,7 @@
+ignore:
+  field_paths:
+    - CreateElasticsearchDomainInput.ElasticsearchDomainName
+    - CreateElasticsearchDomainInput.ElasticsearchDomaineName
+  resource_names:
+    - OutboundCrossClusterSearchConnection
+    - Package

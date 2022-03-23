@@ -151,6 +151,7 @@ import (
 	"github.com/crossplane/provider-aws/pkg/controller/sns/subscription"
 	"github.com/crossplane/provider-aws/pkg/controller/sns/topic"
 	"github.com/crossplane/provider-aws/pkg/controller/sqs/queue"
+    "github.com/sqerison/provider-aws/pkg/controller/elasticsearchservice/elasticsearchdomain"
 	transferserver "github.com/crossplane/provider-aws/pkg/controller/transfer/server"
 	transferuser "github.com/crossplane/provider-aws/pkg/controller/transfer/user"
 )
@@ -292,6 +293,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		nottopic.SetupSNSTopic,
 		notsubscription.SetupSubscription,
 		prometheusserviceworkspace.SetupWorkspace,
+        elasticsearchdomain.SetupElasticsearchDomain,
 	} {
 		if err := setup(mgr, o); err != nil {
 			return err
