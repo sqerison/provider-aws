@@ -78,6 +78,7 @@ import (
 	transferv1alpha1 "github.com/crossplane/provider-aws/apis/transfer/v1alpha1"
 	awsv1alpha3 "github.com/crossplane/provider-aws/apis/v1alpha3"
 	awsv1beta1 "github.com/crossplane/provider-aws/apis/v1beta1"
+	elasticsearchservicev1alpha1 "github.com/crossplane/provider-aws/apis/elasticsearchservice/v1alpha1"
 )
 
 func init() {
@@ -141,6 +142,7 @@ func init() {
 		snsv1beta1.SchemeBuilder.AddToScheme,
 		prometheusservice.SchemeBuilder.AddToScheme,
 		cloudsearchv1alpha1.AddToScheme,
+		elasticsearchservicev1alpha1.AddToScheme,
 	)
 }
 
